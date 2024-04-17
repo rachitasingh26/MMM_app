@@ -1,4 +1,4 @@
-jax
+jax.numpy
 numpyro
 lightweight_mmm
 numpy
