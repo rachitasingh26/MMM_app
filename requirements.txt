@@ -1,4 +1,4 @@
-jax.numpy
+jaxlib
 numpyro
 lightweight_mmm
 numpy
