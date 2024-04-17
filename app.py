@@ -14,22 +14,22 @@ from sklearn.cluster import KMeans
 from sklearn.preprocessing import MinMaxScaler
 import streamlit as st
 
-df= pd.read_csv("/Users/rachitasingh/Desktop/Capstone/Customer_Data.csv")
-df_main = pd.read_csv("/Users/rachitasingh/Desktop/Capstone/MMM_Data.csv")
+df= pd.read_csv("Customer_Data.csv")
+df_main = pd.read_csv("MMM_Data.csv")
 
 @st.cache_data
 def load_customer_data(df):
-    df = pd.read_csv("/Users/rachitasingh/Desktop/Capstone/Customer_Data.csv", index_col=0)
+    df = pd.read_csv("Customer_Data.csv", index_col=0)
     return df
 
 @st.cache_data
 def load_main_data(filepath):
-    df_main = pd.read_csv("/Users/rachitasingh/Desktop/Capstone/MMM_Data.csv", index_col=0)
+    df_main = pd.read_csv("MMM_Data.csv", index_col=0)
     return df_main
 
 @st.cache_data
 def load_and_process_data(df_main):
-    df_main = pd.read_csv("/Users/rachitasingh/Desktop/Capstone/MMM_Data.csv")
+    df_main = pd.read_csv("MMM_Data.csv")
     mdsp_cols = ["Newspaper", "Radio", "Social Media", "TV"]
     hldy_cols = [col for col in df_main.columns if 'hldy_' in col]
     seas_cols = [col for col in df_main.columns if 'seas_' in col]
@@ -77,7 +77,7 @@ def clusters(df):
     st.empty()
     st.write("The dataset comprises of 200 data points. The features of the dataset include Customer ID, Customer age, Customer gender, Annual income and Spending score.")
     st.empty()
-    df= pd.read_csv('/Users/rachitasingh/Desktop/Capstone/Customer_Data.csv', index_col = 0)
+    df= pd.read_csv('Customer_Data.csv', index_col = 0)
     st.write(df)
     def main():
         st.empty()
@@ -178,7 +178,7 @@ def impact(df_main):
     st.empty()
     st.write("The identified customer segments are incorporated in the MMM dataset as dummy variables. The MMM dataset consists of the following features – Media channels (Newspaper, TV, Radio, Social Media), Sales, Holidays, Seasonality and Clusters.")
     st.empty()
-    df_main = pd.read_csv("/Users/rachitasingh/Desktop/Capstone/MMM_Data.csv", index_col = 0)
+    df_main = pd.read_csv("MMM_Data.csv", index_col = 0)
     st.write(df_main)
     st.empty()
     st.write("To understand the impact of different media channels on different customer segments, we ran a regression model by initialising interaction terms (media x cluster) and assessed the impact on the basis of coefficient values.")
@@ -318,13 +318,13 @@ def insights():
 
 
 def app():
-    df_main = load_and_process_data("/Users/rachitasingh/Desktop/Capstone/MMM_Data.csv")
+    df_main = load_and_process_data("MMM_Data.csv")
     page = st.sidebar.selectbox("Navigation Bar", ["Introduction", "Customer Segmentation","Media Channel Impact", "Media Data Analysis", "Budget Optimization and Allocation", "Overall Model Insights"])
 
     if "df" not in st.session_state:
-        st.session_state.df = load_customer_data('/Users/rachitasingh/Desktop/Capstone/Customer_Data.csv')
+        st.session_state.df = load_customer_data('Customer_Data.csv')
     if "df_main" not in st.session_state:
-        st.session_state.df_main = load_main_data("/Users/rachitasingh/Desktop/Capstone/MMM_Data.csv")
+        st.session_state.df_main = load_main_data("MMM_Data.csv")
 
     if page == "Introduction":
         st.title("Applications of Customer Segmentation and Bayesian Modelling for Market Mix Models")
