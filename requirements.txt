@@ -1,4 +1,4 @@
-"jax[cpu]"
+jax
 numpyro
 lightweight_mmm
 numpy
