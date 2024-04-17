@@ -1,4 +1,5 @@
-jaxlib
+jax==0.4.23
+jaxlib==0.4.23
 numpyro
 lightweight_mmm
 numpy
