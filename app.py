@@ -221,7 +221,7 @@ def impact(df_main):
     st.write("4. TV positively impacts customer segments 1,2,3,4,5.")
     
 def mmm_analysis(df_main):
-    st.title("Media data Analysis")
+    st.title("Media Data Analysis")
     st.empty()
     st.write("The MMM model is based on Bayesian Regression, which incorporates prior knowledge or beliefs into the modelling process, allowing for more robust and flexible estimation of marketing channel effects. It adapts to data uncertainty and complexity by updating beliefs with incoming data, offering probabilistic insights into the effectiveness of marketing spends across different channels. This approach provides a deeper understanding of marketing dynamics and decision-making under uncertainty, enhancing strategic planning and optimization in MMM.")
     st.write("A python framework called LightweightMMM has been used to perform Bayesian Modelling, and allows users to choose from 3 different approaches to demonstrate a lagged effect of media channels on sales – Ad stock, Carryover and Hill Ad stock. The choice of approach depends on the specific business use case and requirement. For our model, we have applied the ‘Hill Ad stock’ approach.")
