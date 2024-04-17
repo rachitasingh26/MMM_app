@@ -322,7 +322,7 @@ def app():
     page = st.sidebar.selectbox("Navigation Bar", ["Introduction", "Customer Segmentation","Media Channel Impact", "Media Data Analysis", "Budget Optimization and Allocation", "Overall Model Insights"])
 
     if page == "Introduction":
-        st.title("Applications of Customer Segmentation and Bayesian Modelling for Market Mix Models")
+        st.title("Applications of Customer Segmentation and Bayesian Modelling in Market Mix Models")
         st.empty()
         st.write("In the digital age, where data drives decisions, the sanctity and accuracy of data have become paramount. However, with the advent of stringent data privacy regulations and the increasing use of ad blockers by consumers, the gap between captured data and actual user behaviour has widened, posing a significant challenge for marketers.")
         st.write("This discrepancy, which can be as high as 30% in conversion attribution, undermines the effectiveness of tracking tools and leaves marketers navigating in the dark, unable to gauge the real impact of their campaigns. This misalignment not only obscures the visibility of campaign performance but also leads to inefficient budget allocation across various online mediums, culminating in substantial financial waste and missed opportunities.")
