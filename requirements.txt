@@ -1,0 +1,10 @@
+-U "jax[cpu]"
+numpyro
+lightweight_mmm
+numpy
+pandas
+matplotlib
+seaborn
+statsmodels
+sklearn
+streamlit
