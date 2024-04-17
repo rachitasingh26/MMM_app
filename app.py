@@ -302,7 +302,7 @@ def insights():
     st.empty()
     st.write("The insights derived from the model outputs and analysis suggest a strategic adjustment of marketing budgets and efforts across different media channels to better target specific customer segments that are most responsive. Here's an elaboration on the recommended actions")
     st.empty()
-    st.image("/Users/rachitasingh/Desktop/Capstone/insights.png", caption = "Overall Insights")
+    st.image("insights.png", caption = "Overall Insights")
     st.empty()
     st.write("1. Media Channel - Newspaper")
     st.write("The recommendation to decrease the budget for newspaper advertising is likely due to a lower return on investment or less effectiveness compared to other channels. However, there’s still some value in using this channel for reaching customer segments 2 and 3, which may respond more positively to newspaper ads than other segments. The focus here would be on precision targeting within the newspaper medium to maximize impact where it remains relevant.")    
@@ -334,7 +334,7 @@ def app():
         st.write("Market Mix Modeling (MMM) emerges as a robust alternative in this scenario, offering a way to circumvent the limitations posed by data privacy issues and the inherent shortcomings of attribution models. MMM can guide strategic decisions on budget allocation, channel optimization, and marketing mix strategy by identifying the incremental impact of each marketing input on sales. An implementation of Bayesian Models along with understanding customer segment level impact of media channels can help generate more granular insights and drive business decisions effectively.")
         st.write("An overall workflow of the project along with specific modules is depicted through the diagram below - ")
         st.empty()
-        st.image("/Users/rachitasingh/Desktop/Capstone/workflow.png", caption = "Project Workflow")
+        st.image("workflow.png", caption = "Project Workflow")
         st.empty()
         st.write("The project is essentially divided into two phases and four modules within the phases. Each tab in the navigation bar represents one module, followed by deriving the overall insights after running the complete model.")
     elif page == "Customer Segmentation":
