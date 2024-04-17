@@ -321,11 +321,6 @@ def app():
     df_main = load_and_process_data("MMM_Data.csv")
     page = st.sidebar.selectbox("Navigation Bar", ["Introduction", "Customer Segmentation","Media Channel Impact", "Media Data Analysis", "Budget Optimization and Allocation", "Overall Model Insights"])
 
-    if "df" not in st.session_state:
-        st.session_state.df = load_customer_data('Customer_Data.csv')
-    if "df_main" not in st.session_state:
-        st.session_state.df_main = load_main_data("MMM_Data.csv")
-
     if page == "Introduction":
         st.title("Applications of Customer Segmentation and Bayesian Modelling for Market Mix Models")
         st.empty()
@@ -338,16 +333,16 @@ def app():
         st.empty()
         st.write("The project is essentially divided into two phases and four modules within the phases. Each tab in the navigation bar represents one module, followed by deriving the overall insights after running the complete model.")
     elif page == "Customer Segmentation":
-        clusters(st.session_state.df)
+        clusters(df)
 
     elif page == "Media Channel Impact":
-        impact(st.session_state.df_main)
+        impact(df_main)
         
     elif page == "Media Data Analysis":
-        mmm_analysis(st.session_state.df_main)
+        mmm_analysis(df_main)
         
     elif page == "Budget Optimization and Allocation":
-        optimization(st.session_state.df_main)
+        optimization(df_main)
     elif page == "Overall Model Insights":
         insights()
 
