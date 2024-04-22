@@ -167,9 +167,9 @@ def impact():
     st.empty()
     st.write("The identified customer segments are incorporated in the MMM dataset as dummy variables. The MMM dataset consists of the following features – Media channels (Newspaper, TV, Radio, Social Media), Sales, Holidays, Seasonality and Clusters.")
     st.empty()
-    uploaded_file = st.file_uploader("Upload the dataset", type=['csv'])
-    if uploaded_file is not None:
-        df_main = pd.read_csv(uploaded_file)
+    upload_file = st.file_uploader("Upload the dataset", type=['csv'])
+    if upload_file is not None:
+        df_main = pd.read_csv(upload_file)
         st.write(df_main)
     st.empty()
     st.write("To understand the impact of different media channels on different customer segments, we ran a regression model by initialising interaction terms (media x cluster) and assessed the impact on the basis of coefficient values.")
