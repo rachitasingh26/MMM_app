@@ -14,19 +14,6 @@ from sklearn.cluster import KMeans
 from sklearn.preprocessing import MinMaxScaler
 import streamlit as st
 
-df= pd.read_csv("Customer_Data.csv")
-df_main = pd.read_csv("MMM_Data.csv")
-
-@st.cache_data
-def load_customer_data(df):
-    df = pd.read_csv("Customer_Data.csv", index_col=0)
-    return df
-
-@st.cache_data
-def load_main_data(filepath):
-    df_main = pd.read_csv("MMM_Data.csv", index_col=0)
-    return df_main
-
 @st.cache_data
 def load_and_process_data(df_main):
     df_main = pd.read_csv("MMM_Data.csv")
@@ -72,13 +59,15 @@ def fit_mmm_model(df_main):
     return mmm, target_scaler, cost_scaler, n_media_channels, extra_features, extra_features_scaler, media_scaler, SEED, media_data
 
 
-def clusters(df):
+def clusters():
     st.title("Customer Segmentation")
     st.empty()
     st.write("The dataset comprises of 200 data points. The features of the dataset include Customer ID, Customer age, Customer gender, Annual income and Spending score.")
     st.empty()
-    df= pd.read_csv('Customer_Data.csv', index_col = 0)
-    st.write(df)
+    uploaded_file = st.file_uploader("Upload the dataset", type=['csv'])
+    if uploaded_file is not None:
+        df = pd.read_csv(uploaded_file)
+        st.write(df)
     def main():
         st.empty()
         st.subheader("Understanding the dataset:")
@@ -173,13 +162,15 @@ def clusters(df):
         main()
     
     
-def impact(df_main):
+def impact():
     st.title("Media Channel Impact")
     st.empty()
     st.write("The identified customer segments are incorporated in the MMM dataset as dummy variables. The MMM dataset consists of the following features – Media channels (Newspaper, TV, Radio, Social Media), Sales, Holidays, Seasonality and Clusters.")
     st.empty()
-    df_main = pd.read_csv("MMM_Data.csv", index_col = 0)
-    st.write(df_main)
+    uploaded_file = st.file_uploader("Upload the dataset", type=['csv'])
+    if uploaded_file is not None:
+        df_main = pd.read_csv(uploaded_file)
+        st.write(df_main)
     st.empty()
     st.write("To understand the impact of different media channels on different customer segments, we ran a regression model by initialising interaction terms (media x cluster) and assessed the impact on the basis of coefficient values.")
     st.write("There are four media channels, namely – newspaper, TV, radio and social media, along with five distinct customer segments. The visualisation depicts either a positive or negative impact of a media channel on different customer segments, and the impacts are based on the coefficient values of the interaction terms (media x cluster). A positive impact estimates that running ads through that media channel could convert that specific group of customers into users of their product/service. A negative impact estimates the opposite.")
@@ -333,10 +324,10 @@ def app():
         st.empty()
         st.write("The project is essentially divided into two phases and four modules within the phases. Each tab in the navigation bar represents one module, followed by deriving the overall insights after running the complete model.")
     elif page == "Customer Segmentation":
-        clusters(df)
+        clusters()
 
     elif page == "Media Channel Impact":
-        impact(df_main)
+        impact()
         
     elif page == "Media Data Analysis":
         mmm_analysis(df_main)
