@@ -254,7 +254,7 @@ def mmm_analysis(df_main):
 def optimization(df_main):
     st.title("Budget Optimization and Allocation")
     st.empty()
-    st.write("The next step after understanding the current trends and data through media contribution estimates, ROI estimates and response curves is to perform optimisation. Gradient descent algorithm is used to perform a maximisation task, which gives an optimal channel wise budget allocation that will maximise the sales. The predicted sales value after performing the suggested budget allocation is also generated as output.")
+    st.write("The next step after understanding the current trends and data through media contribution estimates, ROI estimates and response curves is to perform optimisation. SLSQS, a gradient based optimisation algorithm is used to perform a maximisation task, which gives an optimal channel wise budget allocation that will maximise the sales. The predicted sales value after performing the suggested budget allocation is also generated as output.")
     st.write("The optimisation is run to give the estimated budget for maximising sales over a period of time. The period of time can be specified in days, weeks, months or years. Since our input time series data is weekly data, we will take the number of time periods as a weekly input.")
     st.empty()
     n_time_periods = st.number_input("Enter the number of time periods (weeks):", min_value=1, step=1)
