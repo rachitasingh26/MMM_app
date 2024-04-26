@@ -334,7 +334,7 @@ def app():
     elif page == "Media Data Analysis":
         mmm_analysis(df_main)
         
-    elif page == "Budget Optimization and Allocation":
+    elif page == "Budget Optimisation and Allocation":
         optimisation(df_main)
     elif page == "Overall Model Insights":
         insights()
