@@ -251,11 +251,13 @@ def mmm_analysis(df_main):
         st.write("Marketers make use of marketing response curves and marginal revenue curves that shows the maximum amount required to allocate to a marketing channel before revenue diminishes. The information the response curves provide are translated into budget allocations for each of the marketing channels. This ensures that the maximum ROI is achieved.")
 
     
-def optimization(df_main):
-    st.title("Budget Optimization and Allocation")
+def optimisation(df_main):
+    st.title("Budget Optimisation and Allocation")
     st.empty()
     st.write("The next step after understanding the current trends and data through media contribution estimates, ROI estimates and response curves is to perform optimisation. SLSQS, a gradient based optimisation algorithm is used to perform a maximisation task, which gives an optimal channel wise budget allocation that will maximise the sales. The predicted sales value after performing the suggested budget allocation is also generated as output.")
     st.write("The optimisation is run to give the estimated budget for maximising sales over a period of time. The period of time can be specified in days, weeks, months or years. Since our input time series data is weekly data, we will take the number of time periods as a weekly input.")
+    st.empty()
+    st.image("optimisation.png", caption = "Gradient based MMM optimisation")
     st.empty()
     n_time_periods = st.number_input("Enter the number of time periods (weeks):", min_value=1, step=1)
     if st.button("Run Optimization"):  
@@ -310,7 +312,7 @@ def insights():
 
 def app():
     df_main = load_and_process_data("MMM_Data.csv")
-    page = st.sidebar.selectbox("Navigation Bar", ["Introduction", "Customer Segmentation","Media Channel Impact", "Media Data Analysis", "Budget Optimization and Allocation", "Overall Model Insights"])
+    page = st.sidebar.selectbox("Navigation Bar", ["Introduction", "Customer Segmentation","Media Channel Impact", "Media Data Analysis", "Budget Optimisation and Allocation", "Overall Model Insights"])
 
     if page == "Introduction":
         st.title("Applications of Customer Segmentation and Bayesian Modelling in Market Mix Models")
@@ -333,7 +335,7 @@ def app():
         mmm_analysis(df_main)
         
     elif page == "Budget Optimization and Allocation":
-        optimization(df_main)
+        optimisation(df_main)
     elif page == "Overall Model Insights":
         insights()
 
