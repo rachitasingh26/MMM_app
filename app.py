@@ -291,7 +291,7 @@ def optimisation(df_main):
         
 
 def insights():
-    st.title("Overall Model Insights")
+    st.title("MMM Insights")
     st.empty()
     st.write("The insights derived from the model outputs and analysis suggest a strategic adjustment of marketing budgets and efforts across different media channels to better target specific customer segments that are most responsive. Here's an elaboration on the recommended actions")
     st.empty()
