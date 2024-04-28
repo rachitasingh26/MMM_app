@@ -217,7 +217,7 @@ def mmm_analysis(df_main):
     st.write("The MMM model is based on Bayesian Regression, which incorporates prior knowledge or beliefs into the modelling process, allowing for more robust and flexible estimation of marketing channel effects. It adapts to data uncertainty and complexity by updating beliefs with incoming data, offering probabilistic insights into the effectiveness of marketing spends across different channels. This approach provides a deeper understanding of marketing dynamics and decision-making under uncertainty, enhancing strategic planning and optimization in MMM.")
     st.write("A python framework called LightweightMMM has been used to perform Bayesian Modelling, and allows users to choose from 3 different approaches to demonstrate a lagged effect of media channels on sales – Ad stock, Carryover and Hill Ad stock. The choice of approach depends on the specific business use case and requirement. For our model, we have applied the ‘Hill Ad stock’ approach.")
     st.empty()
-    if st.button("Run MMM Analysis"):
+    if st.button("Run Analysis"):
         st.write("Please wait while the model runs in the background. Estimated time is about 1-2 minutes.")
         st.empty()
         mdsp_cols,control_vars, sales_cols, df_main = load_and_process_data(df_main)
@@ -312,7 +312,7 @@ def insights():
 
 def app():
     df_main = load_and_process_data("MMM_Data.csv")
-    page = st.sidebar.selectbox("Navigation Bar", ["Introduction", "Customer Segmentation","Media Channel Impact", "Media Data Analysis", "Budget Optimisation and Allocation", "Overall Model Insights"])
+    page = st.sidebar.selectbox("Navigation Bar", ["Introduction", "Customer Segmentation","Media Channel Impact", "Media Data Analysis", "Budget Optimisation and Allocation", "MMM Insights"])
 
     if page == "Introduction":
         st.title("Applications of Customer Segmentation and Bayesian Modelling in Market Mix Models")
@@ -336,7 +336,7 @@ def app():
         
     elif page == "Budget Optimisation and Allocation":
         optimisation(df_main)
-    elif page == "Overall Model Insights":
+    elif page == "MMM Insights":
         insights()
 
 if __name__ == "__main__":
