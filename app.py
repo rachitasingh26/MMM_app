@@ -59,15 +59,13 @@ def fit_mmm_model(df_main):
     return mmm, target_scaler, cost_scaler, n_media_channels, extra_features, extra_features_scaler, media_scaler, SEED, media_data
 
 
-def clusters():
+def clusters(df):
     st.title("Customer Segmentation")
     st.empty()
     st.write("The dataset comprises of 200 data points. The features of the dataset include Customer ID, Customer age, Customer gender, Annual income and Spending score.")
     st.empty()
-    uploaded_file = st.file_uploader("Upload the dataset", type=['csv'])
-    if uploaded_file is not None:
-        df = pd.read_csv(uploaded_file)
-        st.write(df)
+    df = pd.read_csv("Customer_Data")
+    st.write(df)
     def main():
         st.empty()
         st.subheader("Understanding the dataset:")
@@ -162,15 +160,13 @@ def clusters():
         main()
     
     
-def impact():
+def impact(df_main):
     st.title("Media Channel Impact")
     st.empty()
     st.write("The identified customer segments are incorporated in the MMM dataset as dummy variables. The MMM dataset consists of the following features – Media channels (Newspaper, TV, Radio, Social Media), Sales, Holidays, Seasonality and Clusters.")
     st.empty()
-    upload_file = st.file_uploader("Upload the dataset", type=['csv'])
-    if upload_file is not None:
-        df_main = pd.read_csv(upload_file)
-        st.write(df_main)
+    df_main = pd.read_csv("MMM_Data")
+    st.write(df_main)
     st.empty()
     st.write("To understand the impact of different media channels on different customer segments, we ran a regression model by initialising interaction terms (media x cluster) and assessed the impact on the basis of coefficient values.")
     st.write("There are four media channels, namely – newspaper, TV, radio and social media, along with five distinct customer segments. The visualisation depicts either a positive or negative impact of a media channel on different customer segments, and the impacts are based on the coefficient values of the interaction terms (media x cluster). A positive impact estimates that running ads through that media channel could convert that specific group of customers into users of their product/service. A negative impact estimates the opposite.")
@@ -326,10 +322,10 @@ def app():
         st.empty()
         st.write("The project is essentially divided into two phases and four modules within the phases. Each tab in the navigation bar represents one module, followed by deriving the overall insights after running the complete model.")
     elif page == "Customer Segmentation":
-        clusters()
+        clusters(df)
 
     elif page == "Media Channel Impact":
-        impact()
+        impact(df_main)
         
     elif page == "Media Data Analysis":
         mmm_analysis(df_main)
