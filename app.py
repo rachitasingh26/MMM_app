@@ -64,7 +64,7 @@ def clusters(df):
     st.empty()
     st.write("The dataset comprises of 200 data points. The features of the dataset include Customer ID, Customer age, Customer gender, Annual income and Spending score.")
     st.empty()
-    df = pd.read_csv("Customer_Data")
+    df = pd.read_csv("Customer_Data.csv")
     st.write(df)
     def main():
         st.empty()
@@ -165,7 +165,7 @@ def impact(df_main):
     st.empty()
     st.write("The identified customer segments are incorporated in the MMM dataset as dummy variables. The MMM dataset consists of the following features – Media channels (Newspaper, TV, Radio, Social Media), Sales, Holidays, Seasonality and Clusters.")
     st.empty()
-    df_main = pd.read_csv("MMM_Data")
+    df_main = pd.read_csv("MMM_Data.csv")
     st.write(df_main)
     st.empty()
     st.write("To understand the impact of different media channels on different customer segments, we ran a regression model by initialising interaction terms (media x cluster) and assessed the impact on the basis of coefficient values.")
