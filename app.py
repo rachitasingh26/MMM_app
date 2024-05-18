@@ -150,11 +150,11 @@ def clusters(df):
         st.empty()
         st.write("1. Cluster 1: These are average income earners with average spending scores. They are cautious with their spending.")
         st.write("2. Cluster 2: The customers in this group are high income earners and with high spending scores. They bring in profit. Discounts and other offers targeted at this group will increase their spending score and maximize profit.")
-        st.write("3. Cluster 3: This group of customers have a higher income but they do not spend more at the store. One of the assumption could be that they are not satisfied with the services rendered. They are another ideal group to be targeted by the marketing team because they have the potential to bring in increased profit.")
-        st.write("4. Cluster 4: Low income earners with low spending score.")
-        st.write("5. Cluster 5: These are low income earning customers with high spending scores. One assumption for this can be that they enjoy and are satisfied with the services rendered.")
+        st.write("3. Cluster 3: These are low income earning customers with high spending scores. One assumption for this can be that they enjoy and are satisfied with the services rendered.")
+        st.write("4. Cluster 4: This group of customers have a higher income but they do not spend more at the store. One of the assumption could be that they are not satisfied with the services rendered. They are another ideal group to be targeted by the marketing team because they have the potential to bring in increased profit.")
+        st.write("5. Cluster 5: Low income earners with low spending score.")
         st.empty()
-        st.write("Based on the derived insights, cluster 2,3 and 5 are the focus segments that are crucial in maximising sales.")
+        st.write("Based on the derived insights, cluster 2,3 and 4 are the focus segments that are crucial in maximising sales.")
         
     if __name__ == '__main__':
         main()
