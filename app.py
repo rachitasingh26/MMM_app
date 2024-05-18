@@ -307,7 +307,7 @@ def insights():
 
 
 def app():
-    df = pd.read_csv("Customer_Data")
+    df = pd.read_csv("Customer_Data.csv")
     df_main = load_and_process_data("MMM_Data.csv")
     page = st.sidebar.selectbox("Navigation Bar", ["Introduction", "Customer Segmentation","Media Channel Impact", "Media Data Analysis", "Budget Optimisation and Allocation", "MMM Insights"])
 
