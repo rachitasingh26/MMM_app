@@ -251,11 +251,9 @@ def optimisation(df_main):
     st.title("Budget Optimisation and Allocation")
     st.empty()
     st.write("The next step after understanding the current trends and data through media contribution estimates, ROI estimates and response curves is to perform optimisation. SLSQS, a gradient based optimisation algorithm is used to perform a maximisation task, which gives an optimal channel wise budget allocation that will maximise the sales. The predicted sales value after performing the suggested budget allocation is also generated as output.")
-    st.write("The optimisation is run to give the estimated budget for maximising sales over a period of time. The period of time can be specified in days, weeks, months or years. Since our input time series data is weekly data, we will take the number of time periods as a weekly input.")
+    st.write("The optimisation is run to give the estimated budget for maximising sales over a period of time. The period of time can be specified in days, weeks, months or years. Since our input time series data is weekly data, we will take the number of time periods as a weekly input. The time period specified here is 20 weeks.")
     st.empty()
-    st.image("optimisation.png", caption = "Gradient based MMM optimisation")
-    st.empty()
-    n_time_periods = st.number_input("Enter the number of time periods (weeks):", min_value=1, step=1)
+    n_time_periods = 20
     if st.button("Run Optimization"):  
         st.write("Please wait while the optimisation is in progress. Estimated time is about 1-2 minutes.")
         mdsp_cols,control_vars, sales_cols, df_main = load_and_process_data(df_main)
@@ -294,16 +292,16 @@ def insights():
     st.image("insights.png", caption = "Overall Insights")
     st.empty()
     st.write("1. Media Channel - Newspaper")
-    st.write("The recommendation to decrease the budget for newspaper advertising is likely due to a lower return on investment or less effectiveness compared to other channels. However, there’s still some value in using this channel for reaching customer segments 2 and 3, which may respond more positively to newspaper ads than other segments. The focus here would be on precision targeting within the newspaper medium to maximize impact where it remains relevant.")    
+    st.write("The recommendation to decrease the budget for newspaper advertising is likely due to a lower return on investment or less effectiveness compared to other channels. However, there’s still some value in using this channel for reaching customer segments 2, 3 and 4, which may respond more positively to newspaper ads than other segments. The focus here would be on precision targeting within the newspaper medium to maximize impact where it remains relevant.")    
     st.empty()
     st.write("2. Media Channel - TV")
-    st.write("TV advertising is shown to be effective and thus warrants an increased budget. This channel's broad reach and influence are particularly significant for customer segments 2, 3, and 5. These segments may have demonstrated a strong engagement with TV ads or a higher likelihood of conversion following exposure to such ads. By boosting investment in TV, the brand aims to capitalize on this channel's strengths to reach and influence these key segments more profoundly.")
+    st.write("TV advertising is shown to be effective and thus warrants an increased budget. This channel's broad reach and influence are particularly significant for customer segments 2, 3, and 4. These segments may have demonstrated a strong engagement with TV ads or a higher likelihood of conversion following exposure to such ads. By boosting investment in TV, the brand aims to capitalize on this channel's strengths to reach and influence these key segments more profoundly.")
     st.empty()
     st.write("3. Media Channel - Radio")
-    st.write("Similar to TV, there is a suggestion to increase the budget for radio advertising. This medium is effective for targeted marketing towards customer segments 2 and 3, which implies these segments may consume radio content frequently or respond well to radio campaigns. Increasing radio spend should focus on times or programs that these segments are most engaged with.")
+    st.write("Similar to TV, there is a suggestion to increase the budget for radio advertising. This medium is effective for targeted marketing towards customer segments 2, 3 and 4, which implies these segments may consume radio content frequently or respond well to radio campaigns. Increasing radio spend should focus on times or programs that these segments are most engaged with.")
     st.empty()
     st.write("4. Media Channel - Social Media")
-    st.write("The recommendation to decrease the social media budget indicates that this channel is not performing well in terms of impacting the key customer segments 2, 3, and 5. It’s possible these segments are either not as active or receptive on social media, or the social media campaigns are not resonating with them. Given that all focus segments are experiencing a negative impact, efforts here should be minimal and highly strategic. Focusing on segment 5, which is least negatively impacted, suggests trying to refine the approach on social media to this group, possibly by understanding and leveraging the specific aspects of social media that do engage them.")
+    st.write("The recommendation to decrease the social media budget indicates that this channel is not performing well in terms of impacting the key customer segments 2 and 3. It’s possible these segments are either not as active or receptive on social media, or the social media campaigns are not resonating with them. However, focusing on segment 4, which is positively impacted, suggests trying to refine the approach on social media to this group, possibly by understanding and leveraging the specific aspects of social media that do engage them.")
 
 
 def app():
