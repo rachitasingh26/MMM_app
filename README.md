@@ -7,9 +7,9 @@ The project aims to understand market mix modelling and consumer psychology, stu
 2. Generate media insights, and study media channels’ Return on Investment (ROI) contribution to sales via Bayesian MMM.
 3. Perform budget optimization and allocation for greater ROI.
 4. Perform a comparative analysis of the Bayesian model with a frequentist method (linear regression).
-
-
-
+ 
+<br/>
+<br/>
 ### Project Workflow
 
 The project is essentially divided into 2 phases - in Phase 1, we gather customer data to perform customer segmentation using K-means clustering to get five different customer segments as outputs, based on the annual income and spending scores of the customers. The clusters are then used in the MMM dataset as dummy variables to run Phase 2 of the model, which is essentially performing market mix modelling.
