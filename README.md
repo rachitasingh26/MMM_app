@@ -10,7 +10,6 @@ The project aims to understand market mix modelling and consumer psychology, stu
 4. Perform a comparative analysis of the Bayesian model with a frequentist method (linear regression).
  
 <br/>
-<br/>
 
 ### Project Workflow
 
