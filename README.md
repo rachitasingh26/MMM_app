@@ -18,7 +18,6 @@ The project is essentially divided into 2 phases - in Phase 1, we gather custome
 ![image](https://github.com/rachitasingh26/MMM_app/assets/87617147/d75f63ff-5d3b-4090-862d-27c8df6bc7f3)
 
 <br/>
-<br/>
 
 ### Project Description
 
@@ -30,7 +29,6 @@ K-Means clustering, Bayesian Regression and Sequential Least Squares Quadratic P
 
 While the model is succesful in accounting for uncertainity and seasonality variations that could affect the performance of media channels, we encountered a few limitations as well. We have assumed that seasonal variation is constant and have thus worked on an additive model, but future work could include working on a multiplicative model which is useful when seasonal variation increases over time. Additionally, there are times when a media channel performs well in one region and does poorly in some other. To address this, implementing a geo-level MMM model is a possibility that can generate more granular insights based on data from specific geographic regions. Dealing with selection bias is crucial for MMM models to improve reliability on results. Selection bias occurs when an input media variable is correlated with an unobserved demand variable (e.g. seasonality, ad targeting), which in turn drives sales.
 
-<br/>
 <br/>
 
 ### Running the project
