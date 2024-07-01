@@ -3,9 +3,13 @@
 The project aims to understand market mix modelling and consumer psychology, study existing methods, and implement a significant model that enhances insights that help marketers and analysts make strategic decisions regarding advertising campaigns and products. The end goal caters to budget optimization for different marketing channels to maximize sales, get a better reach, and improve customer acquisition. This can be achieved by fulfilling the following objectives:
 
 • Identify the effect of different media channels on different customer segments.
+
 • Generate media insights, and study media channels’ Return on Investment (ROI) contribution to sales via Bayesian MMM.
+
 • Perform budget optimization and allocation for greater ROI.
+
 • Perform a comparative analysis of the Bayesian model with a frequentist method (linear regression).
+
 
 ### Project Workflow
 
