@@ -1,14 +1,11 @@
 ## Applications of Customer Segmentation and Bayesian Modelling in Market Mix Models
 
-Businesses are undergoing a digital transformation. It is through this digital trans- formation that companies have developed digital methods to reach customers through advertising. Therefore advertisers seek to properly measure the effectiveness of the different marketing/media channels. Since the adoption of additional advertisement streams, it has become necessary to be able to measure the effectiveness of online and offline media and the contributions they have towards achieving business goals.
+Businesses are undergoing a digital transformation. It is through this digital transformation that companies have developed digital methods to reach customers through advertising. Therefore advertisers seek to properly measure the effectiveness of the different marketing/media channels. Since the adoption of additional advertisement streams, it has become necessary to be able to measure the effectiveness of online and offline media and the contributions they have towards achieving business goals.
 The project aims to understand market mix modelling and consumer psychology, study existing methods, and implement a significant model that enhances insights that help marketers and analysts make strategic decisions regarding advertising campaigns and products. The end goal caters to budget optimization for different marketing channels to maximize sales, get a better reach, and improve customer acquisition. This can be achieved by fulfilling the following objectives:
 
 • Identify the effect of different media channels on different customer segments.
-
 • Generate media insights, and study media channels’ Return on Investment (ROI) contribution to sales via Bayesian MMM.
-
 • Perform budget optimization and allocation for greater ROI.
-
 • Perform a comparative analysis of the Bayesian model with a frequentist method (linear regression).
 
 
